@@ -1,4 +1,6 @@
 
+// This code is used in an Arduino to gather temperature and humidity readings every few seconds
+
 #include "DHT.h"
 
 #define DHTPIN 2     
@@ -18,7 +20,6 @@ void loop() {
   delay(2000);
 
   float h = dht.readHumidity();
-  // Read temperature as Celsius (the default)
   float t = dht.readTemperature();
 
   if (isnan(h) || isnan(t)) {
